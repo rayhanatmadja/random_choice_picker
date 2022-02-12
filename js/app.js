@@ -1,5 +1,6 @@
 const textarea = document.getElementById('textarea');
 const tagsEl = document.getElementById('tags');
+const yaySfx = document.querySelector('.yay');
 
 // arahkan otomatis ke textarea
 textarea.focus();
@@ -51,7 +52,8 @@ function randomSelect(){
         setTimeout(() => {
             const randomTag = pickRandomTag();
             choicedTag(randomTag)
-        }, 100);
+            yaySfx.play();
+        }, 500);
 
     }, times * 100);
 }
